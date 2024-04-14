@@ -1,0 +1,103 @@
+.cancha {
+  width: 150vh;
+  height: 100vh;
+  background-color: rgb(103, 110, 103);
+  position: relative;
+  overflow: hidden;
+  
+}
+.cancha-container {
+    width: 100%;
+  }
+
+.campo {
+  width: 100%;
+  height: 100%;
+  border: 3px solid white;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+}
+
+.linea-media {
+  width: 3px;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+
+.linea-media::after {
+  content: "";
+  width: 15px; /* Tamaño del círculo */
+  height: 12px; /* Tamaño del círculo */
+  background-color: white;
+  border-radius: 50%; /* Hace que el elemento sea un círculo */
+  position: absolute;
+  bottom: 50%;
+  top: 50%; /* Posiciona el círculo en el medio verticalmente */
+  left: 50%; /* Posiciona el círculo en el medio horizontalmente */
+  transform: translate(-50%, -50%); /* Centra el círculo */
+}
+
+.arco {
+  width: 200px;
+  height: 140px;
+  border: 3px solid white;
+  border-radius: 50% 50% 0 0;
+  position: absolute;
+  bottom: 0;
+  transform: translateX(-50%);
+}
+
+.arco-izquierdo {
+  width: 100px;
+  height: 200px;
+  border: 3px solid white;
+  border-radius: 0% 50% 50% 0%;
+  position: absolute;
+  bottom: 430px;
+  left: -60px; /* Ajusta la posición del arco a la izquierda */
+  transform: translateX(50%); /* Centra horizontalmente el arco */
+}
+
+.arco-derecho {
+  right: 100px;
+  width: 100px;
+  height: 200px;
+  border: 3px solid white;
+  border-radius: 50% 0% 0% 50%;
+  position: absolute;
+  bottom: 430px;
+  left: 1320px;
+  transform: translateX(-50%);
+}
+
+.area {
+  width: 50%; /* Ajusta el tamaño de las áreas */
+  height: 30%; /* Ajusta el tamaño de las áreas */
+  background-color: white;
+  position: static;
+}
+
+.area-izquierda {
+    width: 15%;
+    height: 47%; /* Ajusta la altura del área izquierda */
+    position: absolute;
+    left: 0;
+    bottom: 33%; /* Ajusta la posición vertical del área izquierda */
+    border: 3px solid white; /* Ajusta el grosor y el color de los bordes */
+    border-radius: 0% 0% 0% 0%; /* Puedes quitar esta propiedad si no necesitas bordes redondeados */
+  }
+  
+.area-derecha {
+    width: 15%;
+    height: 47%; /* Ajusta la altura del área izquierda */
+    position: absolute;
+    right: 0;
+    bottom: 33%; /* Ajusta la posición vertical del área izquierda */
+    border: 3px solid white; /* Ajusta el grosor y el color de los bordes */
+    border-radius: 0% 0% 0% 0%; /* Puedes quitar esta propiedad si no necesitas bordes redondeados */
+}
